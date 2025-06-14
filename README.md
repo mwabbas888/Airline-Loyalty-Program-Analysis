@@ -80,8 +80,6 @@ The analytical phase involved extensive univariate, bivariate, and multivariate 
 
 The overarching insights and strategic recommendations are summarized as follows:
 
-<img src="./visualizations/Key Takeaways, Recommendations & Next Steps.jpg" alt="Key Takeaways, Recommendations & Next Steps Summary"/>
-
 **Horizon Key Takeaways:**
 * Airmiles redemptions are predominantly in the **Gold (Business) cabin**, particularly on major long-haul routes.
 * A limited number of routes (e.g., JFK, Dubai) **dominate redemption volume**.
