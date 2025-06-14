@@ -15,7 +15,7 @@ The primary objective was to demonstrate robust analytical reasoning and the abi
 
 ## Data Overview & Preparation
 
-The analysis was conducted using two pre-structured datasets: `horizon_alliance_data.xlsx` and `equator_alliance_data.xlsx`. These datasets were provided in a ready-to-analyze format, containing historical Reward Flights data with key performance indicators over a monthly time series from January 2023 to December 2024.
+The analysis was conducted using two pre-structured datasets: `Horizon Alliance.xlsx` and `EQUATOR Alliance.xlsx`. These datasets were provided in a ready-to-analyze format, containing historical Reward Flights data with key performance indicators over a monthly time series from January 2023 to December 2024.
 
 **Key Data Attributes:**
 * Passenger volumes (`PSJ Volume`)
