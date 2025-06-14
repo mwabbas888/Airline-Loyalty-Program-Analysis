@@ -122,9 +122,9 @@ Based on the quantitative analysis, the following strategic recommendations are 
 * **Language:** Python
 * **Libraries:** Pandas for robust data manipulation, Matplotlib and Seaborn for advanced data visualization capabilities.
 * **Datasets:**
-    * `horizon_alliance_data.xlsx`
-    * `equator_alliance_data.xlsx`
-* **Analysis Notebook:** `Reward_Flights_Analysis.ipynb` (contains the complete code for data loading, preprocessing, analysis, and visualization).
+    * `Horizon Alliance.xlsx`
+    * `EQUATOR Alliance.xlsx`
+* **Analysis Notebook:** `Airmiles_Redemption.ipynb` (contains the complete code for data loading, preprocessing, analysis, and visualization).
 * **Analytical Techniques:**
     * Univariate Analysis (e.g., temporal distribution of Airmiles redemption).
     * Bivariate Analysis (e.g., cabin class performance vs. Airmiles, route concentration using Pareto principle).
