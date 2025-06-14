@@ -1,6 +1,6 @@
 # Airline Loyalty Program: Reward Flights Performance Analysis
 
-This repository details a data-driven analysis performed as part of a pricing executive job interview exercise. The project involved a comprehensive examination of Reward Flights data from two distinct loyalty schemes, **Horizon Alliance (BAC)** and **Equator Alliance (CIB Plus)**. The objective was to uncover critical performance insights, identify key trends, evaluate scheme effectiveness, and formulate actionable strategic recommendations.
+This repository details a data-driven analysis performed as part of a pricing executive job interview exercise. The project involved a comprehensive examination of Reward Flights data from two distinct loyalty schemes, **Horizon Alliance** and **Equator Alliance**. The objective was to uncover critical performance insights, identify key trends, evaluate scheme effectiveness, and formulate actionable strategic recommendations.
 
 ---
 
@@ -18,11 +18,12 @@ The primary objective was to demonstrate robust analytical reasoning and the abi
 The analysis was conducted using two pre-structured datasets: `horizon_alliance_data.xlsx` and `equator_alliance_data.xlsx`. These datasets were provided in a ready-to-analyze format, containing historical Reward Flights data with key performance indicators over a monthly time series from January 2023 to December 2024.
 
 **Key Data Attributes:**
-* Passenger volumes
-* Airmiles redeemed
-* Flight routes
-* Cabin Classes (Deluxe, Gold, Premier, Bronze, Executive, Pearl, Silver)
-* Pricing options
+* Passenger volumes (`PSJ Volume`)
+* Airmiles redeemed (`AirMiles Redeemed`)
+* Flight routes (`Route at sector level`)
+* Cabin Classes (`Cabin Code (group)`)
+* Pricing options (`Price Option`)
+* Month of Departure Date (`Month of Departure Date`)
 
 The datasets enabled immediate application of analytical techniques, allowing for direct investigation into performance metrics and trend identification without requiring initial data cleaning or extensive preprocessing.
 
@@ -32,35 +33,39 @@ The datasets enabled immediate application of analytical techniques, allowing fo
 
 The analytical phase involved extensive univariate, bivariate, and multivariate analysis to systematically extract insights and identify performance drivers across both loyalty schemes.
 
-### Overall Redemption Volume and Cabin Class Performance
+### Overall Redemption Volume and Cross-Alliance Comparisons
 
-**Monthly Airmiles Redeemed by Cabin Class:**
+**Monthly Airmiles Redeemed by Cabin Class - Horizon vs Equator:**
 *Insight:* This time-series visualization presents the aggregate monthly Airmiles redemption volumes, disaggregated by specific cabin classes for both Horizon and Equator alliances. It distinctly highlights the scale of Airmiles utilization and reveals monthly patterns, as well as the relative contribution of each cabin class to total redemptions over the two-year period.
 <img src="./visualizations/Monthly Airmiles Redeemed by Cabin Class - Horizon vs Equator.jpg" alt="Monthly Airmiles Redeemed by Cabin Class - Horizon vs Equator"/>
 
-**Airmiles Per Passenger vs. PSJ Volume by Cabin Class:**
-*Insight:* This scatter plot provides a multivariate view of redemption efficiency, correlating Airmiles redeemed per passenger with Passenger Journey Segment (PSJ) volume, differentiated by cabin class. This analysis is crucial for understanding the economic efficiency of redemptions across different service tiers.
-<img src="./visualizations/Airmiles per passenger vs PSJ volume.jpg" alt="Airmiles per passenger vs PSJ volume by Cabin Class"/>
-
 ### Horizon Alliance Performance Analysis
 
-**Route Concentration (Pareto Analysis):**
-*Insight:* A Pareto analysis reveals that for Horizon Alliance, a highly concentrated set of **Top 5 routes accounts for approximately 50% of all Airmiles redemptions**. This indicates a strong reliance on specific premium long-haul routes, a critical insight for risk assessment and strategic planning.
+**Airmiles Per Passenger vs. PSJ Volume (Horizon Alliance):**
+*Insight:* This scatter plot specifically for Horizon Alliance reveals the relationship between the efficiency of Airmiles redemption per passenger and the overall Passenger Journey Segment (PSJ) volume. Segmented by cabin class, it helps identify which cabin/volume combinations yield higher or lower Airmiles burn per passenger within the Horizon scheme.
+<img src="./visualizations/Horizon Alliance - Airmiles per passenger vs PSJ volume.jpg" alt="Horizon Alliance - Airmiles per passenger vs PSJ volume by Cabin Class"/>
+
+**Route Concentration (Pareto Analysis - Horizon Alliance):**
+*Insight:* A Pareto analysis for Horizon Alliance demonstrates a high concentration of Airmiles redemptions, with the **Top 5 routes accounting for approximately 50% of all Airmiles redeemed**. This highlights a significant reliance on specific premium long-haul routes, representing both a strength and a potential area of risk concentration.
 <img src="./visualizations/Horizon Alliance - Route Concentration.jpg" alt="Horizon Alliance - Route Concentration Pareto Chart"/>
 
-**PSJ Volume by Route and Month-Year (Heatmap Analysis):**
-*Insight:* This heatmap provides a detailed multivariate analysis of PSJ volume, showcasing month-by-month and route-by-route performance for Horizon Alliance. It clearly identifies periods of peak demand and seasonal variations, which are essential for capacity and pricing management.
-<img src="./visualizations/Heatmap of PSJ Volume by Route and Month-Year (Horizon).png" alt="Heatmap of PSJ Volume by Route and Month-Year (Horizon)"/>
+**PSJ Volume by Top 12 Horizon Routes and Month-Year (Heatmap Analysis):**
+*Insight:* This detailed heatmap focuses exclusively on the **12 most popular routes by PSJ volume within Horizon Alliance**. It visually depicts monthly passenger volume distribution across these key routes, clearly identifying seasonal peaks and troughs, which is crucial for targeted capacity and pricing strategies.
+<img src="./visualizations/Heatmap of PSJ Volume by Top 12 Horizon Routes and Month-Year.png" alt="Heatmap of PSJ Volume by Top 12 Horizon Routes and Month-Year"/>
 
 ### Equator Alliance Performance Analysis
 
-**Route Concentration (Pareto Analysis):**
-*Insight:* For Equator Alliance, the Pareto analysis demonstrates a **more distributed redemption pattern across a wider range of intra-Europe and Latin America routes**. This dispersion suggests different demand dynamics compared to Horizon, although high redemptions on certain long-haul routes for Equator indicate a potential area for value optimization.
+**Airmiles Per Passenger vs. PSJ Volume (Equator Alliance):**
+*Insight:* Focusing on Equator Alliance, this scatter plot illustrates the relationship between Airmiles redeemed per passenger and PSJ volume for its distinct set of cabin classes. This allows for an isolated assessment of redemption efficiency and volume distribution within the Equator scheme.
+<img src="./visualizations/Equator Alliance - Airmiles per passenger vs PSJ volume.jpg" alt="Equator Alliance - Airmiles per passenger vs PSJ volume by Cabin Class"/>
+
+**Route Concentration (Pareto Analysis - Equator Alliance):**
+*Insight:* The Pareto analysis for Equator Alliance indicates a **more distributed redemption pattern across a broader range of intra-Europe and Latin America routes** compared to Horizon. This dispersion suggests different demand dynamics compared to Horizon, although high redemptions on certain long-haul routes for Equator suggest opportunities for optimizing value given.
 <img src="./visualizations/Equator Alliance - Route Concentration.jpg" alt="Equator Alliance - Route Concentration Pareto Chart"/>
 
-**PSJ Volume by Route and Month-Year (Heatmap Analysis):**
-*Insight:* This heatmap, a multivariate analysis for Equator Alliance, identifies specific monthly and route-based volume trends. The data suggests less pronounced seasonal variation compared to Horizon, informing distinct operational and marketing strategies.
-<img src="./visualizations/Heatmap of PSJ Volume by Route and Month-Year (Equator).png" alt="Heatmap of PSJ Volume by Route and Month-Year (Equator)"/>
+**PSJ Volume by Top 12 Equator Routes and Month-Year (Heatmap Analysis):**
+*Insight:* This heatmap specifically analyzes the **12 most popular routes by PSJ volume within Equator Alliance**. It provides a granular view of monthly passenger volume across these key routes, revealing specific demand patterns that differ from Horizon and informing distinct operational and marketing strategies.
+<img src="./visualizations/Heatmap of PSJ Volume by Top 12 Equator Routes and Month-Year.png" alt="Heatmap of PSJ Volume by Top 12 Equator Routes and Month-Year"/>
 
 ### Consolidated Key Takeaways & Recommendations
 
@@ -94,22 +99,22 @@ Based on the quantitative analysis, the following strategic recommendations are 
 
 1.  **Upselling Strategy for Business Class:** Develop and offer targeted incentives for upgrades from complete fares to business class, capitalizing on existing demand patterns to increase average transaction value.
 2.  **Strategic Airmiles Pricing for Underperforming Routes:** Trial new pricing bundles or implement reduced redemption rates for low-demand routes to stimulate activity and optimize network utilization.
-3.  **Personalized Member-Type Offers:** Leverage member segmentation (e.g., frequent vs. casual fliers) to tailor Airmiles promotions, enhancing relevance and engagement for diverse customer groups.
+3.  **Personalized Member-Type Offers:** Utilize user segmentation (e.g., frequent vs. casual fliers) to tailor Airmiles promotions, enhancing relevance and engagement for diverse customer groups.
 
 ---
 
 ## Technical Details
 
 * **Language:** Python
-* **Libraries:** Utilized for data manipulation, statistical analysis, and advanced data visualization. (Specific libraries like Pandas, NumPy, Matplotlib, and Seaborn were used in the analysis.)
+* **Libraries:** Pandas for robust data manipulation, Matplotlib and Seaborn for advanced data visualization capabilities.
 * **Datasets:**
     * `horizon_alliance_data.xlsx`
     * `equator_alliance_data.xlsx`
-* **Analysis Notebook:** `Reward_Flights_Analysis.ipynb` (contains the complete code for data loading, analysis, and visualization).
+* **Analysis Notebook:** `Reward_Flights_Analysis.ipynb` (contains the complete code for data loading, preprocessing, analysis, and visualization).
 * **Analytical Techniques:**
-    * Univariate Analysis (e.g., distribution of Airmiles redemption over time).
-    * Bivariate Analysis (e.g., cabin class performance vs. Airmiles, route concentration).
-    * Multivariate Analysis (e.g., heatmaps of PSJ volume across routes and time, Airmiles per passenger segmented by cabin class).
+    * Univariate Analysis (e.g., temporal distribution of Airmiles redemption).
+    * Bivariate Analysis (e.g., cabin class performance vs. Airmiles, route concentration using Pareto principle).
+    * Multivariate Analysis (e.g., heatmaps of PSJ volume across routes and time for top routes, Airmiles per passenger segmented by cabin class).
     * Time Series Trend Identification
     * Pareto Principle Application for Route Dominance Assessment
     * Data Aggregation and Summarization
