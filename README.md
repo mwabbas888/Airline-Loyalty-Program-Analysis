@@ -1,6 +1,6 @@
 # Airline Loyalty Program: Reward Flights Performance Analysis
 
-This repository details a data-driven analysis performed as part of a pricing executive job interview exercise. The project involved a comprehensive examination of Reward Flights data from two distinct loyalty schemes, **Horizon Alliance (BAC)** and **Equator Alliance (CIB Plus)**. The objective was to uncover critical performance insights, identify key trends, evaluate scheme effectiveness, and formulate actionable strategic recommendations.
+This repository details a data-driven analysis performed as part of a pricing executive job interview exercise. The project involved a comprehensive examination of Reward Flights data from two distinct loyalty schemes, **Horizon Alliance** and **Equator Alliance**. The objective was to uncover critical performance insights, identify key trends, evaluate scheme effectiveness, and formulate actionable strategic recommendations.
 
 ---
 
@@ -38,56 +38,58 @@ The analytical phase involved extensive univariate, bivariate, and multivariate 
 **Monthly Airmiles Redeemed by Cabin Class - Horizon vs Equator:**
 *Insight:* This time-series visualization presents the aggregate monthly Airmiles redemption volumes, disaggregated by specific cabin classes for both Horizon and Equator alliances.
 * **Horizon is the Market Leader in Redemptions:** Across almost every cabin class, Horizon Alliance consistently demonstrates a significantly higher volume of Airmiles being redeemed compared to Equator Alliance. This indicates Horizon's larger, more engaged, or higher-earning loyalty member base.
-* **Differentiated Cabin Class Strategies:** Horizon shows exceptional strength in its premium cabins ('Gold', 'Deluxe', 'Executive'), where the redemption volume gap with Equator is widest, suggesting effective encouragement for premium travel. Equator is more competitive in mid-to-lower tiers ('Premier', 'Silver') with more stable redemption volumes, pointing to a strategy focused on broader member engagement.
+* **Differentiated Cabin Class Strategies:** Horizon shows exceptional strength in its premium cabins, notably **Gold (Business)** and **Pearl (1st)**, where the redemption volume gap with Equator is widest, suggesting effective encouragement for premium travel. Equator is more competitive in its **Executive (Economy)** and **Premier (Complete)** tiers with more stable redemption volumes, pointing to a strategy focused on broader member engagement.
 * **Clear Seasonality Drives Behavior:** Both alliances exhibit clear seasonal peaks, notably during typical summer travel periods (June-August) and year-end holidays (December). This confirms that reward travel aligns with standard consumer travel patterns, with noticeable dips in early and autumn months.
-<img src="./visualizations/Monthly_Airmiles_Redeemed.jpg" alt="Monthly Airmiles Redeemed by Cabin Class - Horizon vs Equator"/>
+<img src="./visualizations/Monthly_Airmiles_Redeemed.png" alt="Monthly Airmiles Redeemed by Cabin Class - Horizon vs Equator"/>
 
 ### 2. Passenger Behaviour and Redemption Efficiency
 
 **Airmiles Per Passenger vs. PSJ Volume (Horizon Alliance):**
-*Insight:* This scatter plot specifically for Horizon Alliance reveals the relationship between the efficiency of Airmiles redemption per passenger and the overall Passenger Journey Segment (PSJ) volume. Segmented by cabin class, it helps identify which cabin/volume combinations yield higher or lower Airmiles burn per passenger within the Horizon scheme.
+*Insight:* This scatter plot specifically for Horizon Alliance reveals the relationship between the efficiency of Airmiles redemption per passenger and the overall Passenger Journey Segment (PSJ) volume. Segmented by cabin class (Pearl (1st), Gold (Business), Silver (WTP), Bronze (Economy)), it helps identify which cabin/volume combinations yield higher or lower Airmiles burn per passenger within the Horizon scheme.
 * **Consistent Cabin Tiers:** The plot shows distinct horizontal bands, confirming that each cabin class maintains a relatively stable range of mileage costs per passenger, indicating a consistent reward pricing structure.
-<img src="./visualizations/Horizon_Alliance_Scatter.jpg" alt="Horizon Alliance - Airmiles per passenger vs PSJ volume by Cabin Class"/>
+<img src="./visualizations/Horizon_Alliance_Scatter_Generated.png" alt="Horizon Alliance - Airmiles per passenger vs PSJ volume by Cabin Class"/>
 
 **Airmiles Per Passenger vs. PSJ Volume (Equator Alliance):**
-*Insight:* Focusing on Equator Alliance, this scatter plot illustrates the relationship between Airmiles redeemed per passenger and PSJ volume for its distinct set of cabin classes. This allows for an isolated assessment of redemption efficiency and volume distribution within the Equator scheme.
+*Insight:* Focusing on Equator Alliance, this scatter plot illustrates the relationship between Airmiles redeemed per passenger and PSJ volume for its distinct set of cabin classes (Deluxe (Business), Executive (Economy), Prime (Premium Economy), Premier (Complete)). This allows for an isolated assessment of redemption efficiency and volume distribution within the Equator scheme.
 * **Value Drives Volume:** A clear inverse relationship is observed: redemptions with lower Airmiles costs per passenger tend to correlate with significantly higher passenger volumes, confirming that lower prices stimulate higher demand.
-<img src="./visualizations/Equator_Alliance_Scatter.jpg" alt="Equator Alliance - Airmiles per passenger vs PSJ volume by Cabin Class"/>
+<img src="./visualizations/Equator_Alliance_Scatter_Generated.jpg" alt="Equator Alliance - Airmiles per passenger vs PSJ volume by Cabin Class"/>
 
 ### 3. Route Concentration & Strategic Importance
 
 **Route Concentration (Pareto Analysis - Horizon Alliance):**
 *Insight:* A Pareto analysis for Horizon Alliance demonstrates a high concentration of Airmiles redemptions, with the **Top 5 routes accounting for approximately 50% of all Airmiles redeemed**. This highlights a significant reliance on specific premium long-haul routes, representing both a strength and a potential area of risk concentration.
 * **"Vital Few" Routes:** The analysis clearly demonstrates the 80/20 principle: a small number of routes account for a very large percentage (over 70% for the top 20 shown) of all Airmiles redeemed across both alliances. These routes are strategically critical.
-<img src="./visualizations/Horizon_Alliance_Pareto.jpg" alt="Horizon Alliance - Route Concentration Pareto Chart"/>
+<img src="./visualizations/Horizon_Alliance_Pareto_Generated.png" alt="Horizon Alliance - Route Concentration Pareto Chart"/>
 
 **Route Concentration (Pareto Analysis - Equator Alliance):**
 *Insight:* The Pareto analysis for Equator Alliance indicates a **more distributed redemption pattern across a broader range of intra-Europe and Latin America routes** compared to Horizon. This dispersion suggests different demand dynamics compared to Horizon, although high redemptions on certain long-haul routes for Equator suggest opportunities for optimizing value given.
-<img src="./visualizations/Equator_Alliance_Pareto.jpg" alt="Equator Alliance - Route Concentration Pareto Chart"/>
+<img src="./visualizations/Equator_Alliance_Pareto_Generated.png" alt="Equator Alliance - Route Concentration Pareto Chart"/>
 
 ### 4. Temporal Demand Patterns on Key Routes
 
 **PSJ Volume by Top 12 Horizon Routes and Month-Year (Heatmap Analysis):**
 *Insight:* This detailed heatmap focuses exclusively on the **12 most popular routes by PSJ volume within Horizon Alliance**. It visually depicts monthly passenger volume distribution across these key routes, clearly identifying seasonal peaks and troughs, which is crucial for targeted capacity and pricing strategies.
 * **Route-Specific Peak Seasons:** The heatmaps reveal that while overall trends show summer/winter peaks, the intensity and timing of these peaks vary significantly on a per-route basis. This indicates that some routes may have consistent year-round demand, while others are highly seasonal.
-<img src="./visualizations/Horizon_Alliance_Heatmap.png" alt="Heatmap of PSJ Volume by Top 12 Horizon Routes and Month-Year"/>
+<img src="./visualizations/Horizon_Alliance_Heatmap_Generated.png" alt="Heatmap of PSJ Volume by Top 12 Horizon Routes and Month-Year"/>
 
 **PSJ Volume by Top 12 Equator Routes and Month-Year (Heatmap Analysis):**
 *Insight:* This heatmap specifically analyzes the **12 most popular routes by PSJ volume within Equator Alliance**. It provides a granular view of monthly passenger volume across these key routes, revealing specific demand patterns that differ from Horizon and informing distinct operational and marketing strategies.
-<img src="./visualizations/Equator_Alliance_Heatmap.png" alt="Heatmap of PSJ Volume by Top 12 Equator Routes and Month-Year"/>
+<img src="./visualizations/Equator_Alliance_Heatmap_Generated.png" alt="Heatmap of PSJ Volume by Top 12 Equator Routes and Month-Year"/>
 
 ### Consolidated Key Takeaways & Recommendations
 
 The overarching insights and strategic recommendations are summarized as follows:
 
+<img src="./visualizations/Key Takeaways, Recommendations & Next Steps.jpg" alt="Key Takeaways, Recommendations & Next Steps Summary"/>
+
 **Horizon Key Takeaways:**
-* Airmiles redemptions are predominantly in the **Gold cabin**, particularly on major long-haul routes.
+* Airmiles redemptions are predominantly in the **Gold (Business) cabin**, particularly on major long-haul routes.
 * A limited number of routes (e.g., JFK, Dubai) **dominate redemption volume**.
 * Pronounced **seasonal patterns** are observed, with peak performance during summer months.
 
 **Equator Key Takeaways:**
-* Primary redemptions are in **Executive and Premier cabins**.
-* **Deluxe cabin utilization is low**, with exceptions on long-haul routes.
+* Primary redemptions are in **Executive (Economy) and Premier (Complete) cabins**.
+* **Deluxe (Business) cabin utilization is low**, with exceptions on long-haul routes.
 * Exhibits **less significant seasonal variation** compared to Horizon.
 
 ---
